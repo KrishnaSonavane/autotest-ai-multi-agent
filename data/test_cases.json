@@ -1,0 +1,77 @@
+[
+ {
+  "name": "Contradictory Outcome",
+  "log": "All tests passed successfully. However, critical error occurred during cleanup phase.",
+  "expected_failure": true
+},
+{
+  "name": "Negation Trap",
+  "log": "No failure detected except for a minor exception in payment processing.",
+  "expected_failure": true
+},
+{
+  "name": "Silent Data Corruption",
+  "log": "Process completed successfully. Output checksum mismatch detected.",
+  "expected_failure": true
+},
+{
+  "name": "HTTP 200 Failure",
+  "log": "Request returned HTTP 200 but response body contains error: 'transaction failed'",
+  "expected_failure": true
+},
+{
+  "name": "False Error Log",
+  "log": "Error: previous failure resolved successfully. System running normally.",
+  "expected_failure": false
+},
+{
+  "name": "Split Failure Context",
+  "log": "Step 1 completed.\nStep 2 processing...\nStep 3 failed due to null reference.\nRetry successful.",
+  "expected_failure": true
+},
+{
+  "name": "Delayed Failure",
+  "log": "Execution completed successfully. Post-processing task failed after completion.",
+  "expected_failure": true
+},
+{
+  "name": "Semantic Failure",
+  "log": "Operation completed with degraded performance and partial results returned.",
+  "expected_failure": true
+},
+{
+  "name": "Double Negation",
+  "log": "It is not true that no errors occurred during execution.",
+  "expected_failure": true
+},
+{
+  "name": "Module Conflict",
+  "log": "Auth module passed. Payment module failed due to timeout. Overall system marked as passed.",
+  "expected_failure": true
+},
+{
+  "name": "Long Log Buried Failure",
+  "log": "INFO start... DEBUG loading modules... INFO user authenticated... DEBUG cache hit... INFO processing... WARNING retrying... INFO continuing... ERROR database connection lost at step 89... INFO fallback executed... INFO completed",
+  "expected_failure": true
+},
+{
+  "name": "Dominant Success Small Failure",
+  "log": "All modules initialized successfully. All services running. All tests passed. Minor error occurred in logging subsystem.",
+  "expected_failure": true
+},
+{
+  "name": "Noise Overload",
+  "log": "DEBUG x100 lines... INFO x100 lines... WARNING x50 lines... ERROR timeout at final step",
+  "expected_failure": true
+},
+{
+  "name": "Multiple Failures",
+  "log": "Timeout occurred. Retry successful. Later NullPointerException occurred. System recovered partially.",
+  "expected_failure": true
+},
+{
+  "name": "Recovered Failure",
+  "log": "Initial failure detected in module X. Recovery successful. System marked as stable.",
+  "expected_failure": true
+}
+]
